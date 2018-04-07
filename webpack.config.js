@@ -26,7 +26,16 @@ module.exports = {
                     }
                 }
 
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader","css-loader?importLoaders=1","postcss-loader"]
+            },
+            {
+                test: /\.less$/,
+                use: ["style-loader","css-loader","postcss-loader","less-loader"]
             }
         ]
     }
+
 }
