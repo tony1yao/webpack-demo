@@ -28,12 +28,20 @@ module.exports = {
 
             },
             {
+                test: /\.html$/,
+                use: ["html-loader"]
+            },
+            {
                 test: /\.css$/,
                 use: ["style-loader","css-loader?importLoaders=1","postcss-loader"]
             },
             {
                 test: /\.less$/,
                 use: ["style-loader","css-loader","postcss-loader","less-loader"]
+            },
+            {
+                test: /\.(jpg|png|gif|svg)$/,
+                use: ["file-loader","image-webpack-loader"]
             }
         ]
     }

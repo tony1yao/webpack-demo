@@ -1,9 +1,11 @@
 import './css/common.css';
-import layer from './components/layer/layer.js'
+import Layer from './components/layer/layer.js'
 
 const App =  function(){
-    console.log(layer);
+    var layer = new Layer();
+    var dom = document.getElementById('app');
+    dom.innerHTML = layer.tpl;
     alert(111);
 }
 
-new App()
+new App();
